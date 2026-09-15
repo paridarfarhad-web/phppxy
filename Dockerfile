@@ -1,12 +1,3 @@
-FROM php:8.2-apache
-
-# فعال‌سازی ماژول‌های مورد نیاز PHProxy
-RUN a2enmod rewrite
-
-# کپی کردن پروژه
+FROM php:7.4-apache
 COPY . /var/www/html/
-
-# تنظیم دسترسی‌ها
 RUN chown -R www-data:www-data /var/www/html
-
-EXPOSE 80
